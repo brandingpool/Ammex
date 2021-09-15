@@ -1,0 +1,19 @@
+.card{
+    box-sizing: border-box;
+    background-color: white;
+    width: calc(50% - 60px);
+    div{ 
+        display: flex; 
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 80px 50px;
+        h3{
+            color: red;
+        }
+    }
+    figure{
+        width: 100%;
+        max-height: 345px;
+        margin: 0 0 -10px;
+    }
+}
