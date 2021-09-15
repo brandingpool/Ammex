@@ -1,0 +1,161 @@
+/* Fonts and variables */
+@font-face {
+    font-family: 'Biryani';
+    src: url(fonts/Biryani-Regular.ttf);
+}
+@font-face {
+    font-family: 'Biryani Semi';
+    src: url(fonts/Biryani-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Biryani Bold';
+    src: url(fonts/Biryani-ExtraBold.ttf);
+}
+
+$Red: #FE3B1F;
+$sideGutters: 5%;
+$columnGutters: 30px;
+
+/* Font styling */
+h1, h2, h3, h6, .h7, .h7 li{
+    font-family: 'Biryani Bold';
+    margin: 0;
+}
+h5{
+    font-family: 'Biryani Semi';
+    margin: 0;
+}
+body, button, ul, li, h4{
+    font-family: 'Biryani';
+    margin: 0;
+}
+
+body, button, input{
+    font-size: 16px;
+    line-height: 1.2em;
+}
+p{
+    margin: 0;
+}
+h1{
+    font-size: clamp(2.1875rem, 1.6667rem + 2.7778vw, 5rem);
+    line-height: 1.2em;
+}
+h2{
+    font-size: clamp(1.6875rem, 1.3056rem + 2.037vw, 3.75rem);
+    line-height: 1.2em;
+}
+h3{
+    font-size: clamp(1.25rem, 1.0185rem + 1.2346vw, 2.5rem);
+    line-height: 1.2em;
+}
+h4{
+    font-size: clamp(1.25rem, 1.0185rem + 1.2346vw, 2.5rem);
+}
+h5{
+    font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
+    line-height: 1.2em;
+}
+h6{
+    font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
+}
+
+/* Colors */
+section{
+    h2, h3, h4, h5, h6, .h7{
+        color: $Red;
+    }
+}
+.bg-red{
+    background-color: $Red;
+    *{
+        color: white
+    }
+}
+
+
+/* Utilities */
+.text-center{
+    text-align: center;
+}
+.v-align{
+    align-items: center;
+}
+.space-around{
+    justify-content: space-around;
+}
+.cover-width{
+    width: 100%;
+    margin-bottom: -6px;
+}
+
+/* Components */
+button{
+    background-color: $Red;
+    color: white;
+    border: 1px solid $Red;
+    padding: 5px 40px 0px;
+    transition: 0.3s ease all;
+    &:hover{
+        background-color: white;
+        color: $Red;
+        transition: 0.3s ease all;
+    }
+}
+button.light{
+    background-color: white;
+    border-color: white;
+    color: $Red;
+    &:hover{
+        background-color: $Red;
+        color: white;
+    }
+}
+input{
+    border: 1px solid $Red;
+    padding: 10px;
+    &::placeholder{
+        color: $Red;
+    }
+}
+
+/* Grid */
+header{
+    padding: 10px calc(#{$sideGutters} + #{$columnGutters});
+}
+footer{
+    h6, p, a{
+        color: $Red;
+        text-decoration: none;
+    }
+}
+.row{
+    display: flex;
+    padding: 50px $sideGutters;
+}
+.single{
+    padding: 0 $columnGutters;
+}
+.half{
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 $columnGutters;
+}
+.quarter{
+    padding: 0 $columnGutters;
+}
+
+/* Spacing */
+.pt0{ padding-top: 0; }
+
+.pb0{ padding-bottom: 0; }
+
+.p0{ padding: 0; }
+
+.mb30{ margin-bottom: 30px; }
+
+/* HTML defaults modifications */
+html, body{
+    margin: 0;
+}
+img{ margin-bottom: -10px; }
