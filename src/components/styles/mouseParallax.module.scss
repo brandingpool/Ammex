@@ -1,0 +1,25 @@
+.container{
+    position: relative;
+    padding: 180px 0;
+    min-height: 50vh;
+    background-size: 120%;
+    transition: 2s ease-out all;
+    overflow: hidden;
+    *{
+        color: white;
+    }
+    .graphic{
+        position: absolute !important;
+        transition: 1s ease-out all;
+    }
+}
+.home{
+    background-size: 110%;
+    background-image: url('./../../images/AMX_Web-Home-01-BannerPrincipal.jpg');
+}
+.about{
+    background-image: url('./../../images/AMX_Web-About-01-BannerPrincipal.jpg');
+}
+.services{
+    background-image: url('./../../images/AMX_Web-FoodSupply-01-BannerPrincipal.jpg');
+}
