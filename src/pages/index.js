@@ -10,11 +10,11 @@ import ScheduleVisit from "../components/ScheduleVisit"
 const IndexPage = () => {
   return (
     <Layout>
-      <MouseParallax>
+      <MouseParallax page="home" graphic="AMX_Web-Home-01-BannerPrincipal-Grafico.png">
         <h1>We care, we deliver,<br/>we supply well.</h1>
       </MouseParallax>
       <section className="bg-red">
-        <div className="row space-around">
+        <div className="row space-around relative custom-row-1">
           <Card>
             <div className="title">
               <h3>Food<br/>Supply</h3>
@@ -63,6 +63,7 @@ const IndexPage = () => {
               src="../images/AMX_Web-Home-03-Img-Bridge.png"
               placeholder="blurred"
               alt="bridge"
+              quality={ 100 }
             />
           </div>
         </div>
@@ -107,6 +108,7 @@ const IndexPage = () => {
               placeholder="blurred"
               alt=""
               className="cover-width"
+              quality={ 100 }
             />
           </div>
         </div>
@@ -117,6 +119,7 @@ const IndexPage = () => {
               placeholder="blurred"
               alt=""
               className="cover-width"
+              quality={ 100 }
             />
           </div>
           <div className="half">
@@ -136,6 +139,7 @@ const IndexPage = () => {
               placeholder="blurred"
               alt=""
               className="cover-width"
+              quality={ 100 }
             />
           </div>
         </div>
