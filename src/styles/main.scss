@@ -88,6 +88,10 @@ section{
     width: 100%;
     margin-bottom: -6px;
 }
+.relative{
+    position: relative;
+    top: -240px;
+}
 
 /* Components */
 button{
@@ -152,6 +156,9 @@ footer{
 
 .p0{ padding: 0; }
 
+.mt30{ margin-top: 30px; }
+.mt50{ margin-top: 50px; }
+
 .mb30{ margin-bottom: 30px; }
 
 /* HTML defaults modifications */
@@ -159,3 +166,9 @@ html, body{
     margin: 0;
 }
 img{ margin-bottom: -10px; }
+
+/* custom */
+.custom-row-1{
+    top: -240px;
+    margin-bottom: -240px;
+}
