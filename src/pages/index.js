@@ -7,6 +7,9 @@ import Layout from "../components/Layout"
 import Card from "../components/Card"
 import ScheduleVisit from "../components/ScheduleVisit"
 
+import Column from "../components/Column"
+import Row from "../components/Row"
+
 const IndexPage = () => {
   return (
     <Layout>
@@ -14,7 +17,7 @@ const IndexPage = () => {
         <h1>We care, we deliver,<br/>we supply well.</h1>
       </MouseParallax>
       <section className="bg-red">
-        <div className="row space-around relative custom-row-1">
+        <Row className="space-around relative custom-row-1">
           <Card>
             <div className="title">
               <h3>Food<br/>Supply</h3>
@@ -45,64 +48,64 @@ const IndexPage = () => {
               objectPosition="center"
             />
           </Card>
-        </div>
-        <div className="row v-align">
-          <div className="half">
+        </Row>
+        <Row className="v-align">
+          <Column size={6}>
             <h2>Let’s help you<br/>grow your business!</h2>
-          </div>
-          <div className="half text-center">
+          </Column>
+          <Column size={6} className="half text-center">
             <button className="light">CONTACT US</button>
-          </div>
-        </div>
-        <div className="row">
-          <div className="half">
+          </Column>
+        </Row>
+        <Row>
+          <Column size={6}>
             <h5>We are the bridge that connects our clients with products of the the highest quality, small businesses with large producers, and our people with new opportunities. </h5>
-          </div>
-          <div className="half text-center">
+          </Column>
+          <Column size={6} className="text-center">
             <StaticImage 
               src="../images/AMX_Web-Home-03-Img-Bridge.png"
               placeholder="blurred"
               alt="bridge"
               quality={ 100 }
             />
-          </div>
-        </div>
-        <div className="row">
-        <div className="quarter">
-          <ul className="check h7">
-            <li>Fast friendly service</li>
-            <li>Inventory to guarantee supply</li>
-            <li>Same day delivery</li>
-          </ul>
-        </div>
-        <div className="quarter">
-          <ul className="check h7">
-            <li>Quality guaranteed</li>
-            <li>Wide variety of products</li>
-            <li>Top brands</li>
-          </ul>
-        </div>
-        <div className="quarter">
-          <ul className="check h7">
-            <li>Usda facility</li>
-            <li>Strategic location</li>
-            <li>Customer service</li>
-          </ul>
-        </div>
-        <div className="quarter">
-          <ul className="check h7">
-            <li>Technical support</li>
-          </ul>
-        </div>
-        </div>
+          </Column>
+        </Row>
+        <Row>
+          <Column size={3}>
+            <ul className="check h7">
+              <li>Fast friendly service</li>
+              <li>Inventory to guarantee supply</li>
+              <li>Same day delivery</li>
+            </ul>
+          </Column>
+          <Column size={3}>
+            <ul className="check h7">
+              <li>Quality guaranteed</li>
+              <li>Wide variety of products</li>
+              <li>Top brands</li>
+            </ul>
+          </Column>
+          <Column size={3}>
+            <ul className="check h7">
+              <li>Usda facility</li>
+              <li>Strategic location</li>
+              <li>Customer service</li>
+            </ul>
+          </Column>
+          <Column size={3}>
+            <ul className="check h7">
+              <li>Technical support</li>
+            </ul>
+          </Column>
+        </Row>
       </section>
       <section>
-        <div className="row v-align pb0">
-          <div className="half">
+        <Row className="v-align" padding="b">
+          <Column size={5}>
             <h3>Breaking  supply chains to build supply communities</h3>
             <p>We want to be your ally, because we believe that when we support local restaurants and markets we also bring well-being to our community.</p>
-          </div>
-          <div className="half p0">
+          </Column>
+          <Column size={6} padding="0">
             <StaticImage
               src="../images/AMX_Web-Home-04-Img.jpg"
               placeholder="blurred"
@@ -110,10 +113,10 @@ const IndexPage = () => {
               className="cover-width"
               quality={ 100 }
             />
-          </div>
-        </div>
-        <div className="row v-align pt0 pb0">
-          <div className="half p0">
+          </Column>
+        </Row>
+        <Row className="v-align" padding="tb">
+          <Column size={6} padding="0">
             <StaticImage
               src="../images/AMX_Web-Home-05-Img.jpg"
               placeholder="blurred"
@@ -121,19 +124,19 @@ const IndexPage = () => {
               className="cover-width"
               quality={ 100 }
             />
-          </div>
-          <div className="half">
+          </Column>
+          <Column size={5}>
             <h3>Work together to grow together</h3>
             <p>At Ammex, we grow every time our clients reach their business goals as they keep trusting us to satisfy the needs of their companies. Which is why we are committed to be as reliable as a longtime friend.</p>
-          </div>
-        </div>
-        <div className="row v-align pt0">
-          <div className="half">
+          </Column>
+        </Row>
+        <Row className="v-align" padding="t">
+          <Column size={5}>
             <h4>+20 years</h4>
             <h3>A one of a kind family business</h3>
             <p>We have been working as a family to reach our goals for more than 20 years. Today, we work from one of the largest plants in California and the only one of its kind certified by the USDA.</p>
-          </div>
-          <div className="half p0">
+          </Column>
+          <Column size={6} padding="0">
             <StaticImage
               src="../images/AMX_Web-Home-06-Img.jpg"
               placeholder="blurred"
@@ -141,8 +144,8 @@ const IndexPage = () => {
               className="cover-width"
               quality={ 100 }
             />
-          </div>
-        </div>
+          </Column>
+        </Row>
       </section>
       <ScheduleVisit />
     </Layout>

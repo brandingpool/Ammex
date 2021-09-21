@@ -1,7 +1,9 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
+import Column from '../components/Column'
 import Layout from '../components/Layout'
 import MouseParallax from '../components/MouseParallax'
+import Row from '../components/Row'
 import ScheduleVisit from '../components/ScheduleVisit'
 
 function About() {
@@ -14,29 +16,29 @@ function About() {
                 difference</h1>
             </MouseParallax>
             <section className="bg-red">
-                <div className="row">
-                    <div>
+                <Row>
+                    <Column size={7}>
                         <h5>Our team is ready to respond on call, always there to take down any order no matter the size because we know that sometimes all it takes to keep growing is to sell another box - or pallet.</h5>
-                    </div>
-                    <div>
+                    </Column>
+                    <Column>
                         <StaticImage 
                             src="../images/white-icon-ammex.png"
                             alt=""
                             placeholder="tracedSVG"
                         />
-                    </div>
-                </div>
+                    </Column>
+                </Row>
             </section>
             <section>
-                <div className="row">
-                    <div className="single">
+                <Row>
+                    <Column size={9}>
                         <h2>We work with leadership, excellence and transparency</h2>
-                    </div>
-                </div>
+                    </Column>
+                </Row>
             </section>
             <section>
-                <div className="row v-align pt0 pb0">
-                    <div className="half p0">
+                <Row className="v-align" padding="tb">
+                    <Column size={6} padding="0">
                         <StaticImage
                         src="../images/AMX_Web-About-03-Img.jpg"
                         placeholder="dominantColor"
@@ -44,20 +46,22 @@ function About() {
                         className="cover-width"
                         quality={ 100 }
                         />
-                    </div>
-                    <div className="half">
+                    </Column>
+                    <Column size={1}></Column>
+                    <Column size={4}>
                         <h3>Experience and infrastructure</h3>
                         <p className="mt30">We have more than 20 years of experience distributing products from one of the largest plants in California and the only one of its kind certified by the USDA.</p>
                         <button className="mt50">CHECK OUR FACILITIES</button>
-                    </div>
-                </div>
-                <div className="row v-align pt0">
-                    <div className="half">
+                    </Column>
+                    <Column size={1}></Column>
+                </Row>
+                <Row className="v-align" padding="t">
+                    <Column size={4}>
                         <h3>Wide availability</h3>
                         <p className="mt30">Thanks to our relationship with the largest food producers in the United States, we are able to secure and offer wide availability of high demand, premium and specialty products.</p>
                         <button className="mt50">CHECK OUR FACILITIES</button>
-                    </div>
-                    <div className="half p0">
+                    </Column>
+                    <Column size={6} padding="0">
                         <StaticImage
                         src="../images/AMX_Web-About-04-Img.jpg"
                         placeholder="dominantColor"
@@ -65,21 +69,21 @@ function About() {
                         className="cover-width"
                         quality={ 100 }
                         />
-                    </div>
-                </div>
-                <div className="row v-align">
-                    <div className="half">
+                    </Column>
+                </Row>
+                <Row className="v-align">
+                    <Column size={6}>
                         <h2>Working together to grow together</h2>
                         <p className="mt30">We grow every time our clients reach their business goals as they keep trusting us to supply the most important needs of their companies. Which is why we are committed to be as reliable as a longtime friend.</p>
-                    </div>
-                    <div className="half">
+                    </Column>
+                    <Column size={6}>
                         <StaticImage
                             src="../images/AMX_Web-About-05-Img.png"
                             alt=""
                             placeholder="tracedSVG"
                         />
-                    </div>
-                </div>
+                    </Column>
+                </Row>
             </section>
             <ScheduleVisit />
         </Layout>
