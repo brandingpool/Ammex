@@ -48,6 +48,9 @@ function Column( props ) {
         case "0":
             padding = columnStyles.cp0
             break
+        case "large":
+            padding = columnStyles.cpl
+            break
         default: 
             break
     }

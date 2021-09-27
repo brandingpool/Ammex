@@ -3,14 +3,14 @@
     padding: 180px 0;
     min-height: 50vh;
     background-size: 120%;
-    transition: 2s ease-out all;
+    transition: 0.3s ease-out all;
     overflow: hidden;
     *{
         color: white;
     }
     .graphic{
         position: absolute !important;
-        transition: 1s ease-out all;
+        transition: 0.3s ease-out all;
     }
 }
 .home{
@@ -22,4 +22,10 @@
 }
 .services{
     background-image: url('./../../images/AMX_Web-FoodSupply-01-BannerPrincipal.jpg');
+}
+.facilities{
+    background-image: url('./../../images/AMX_Web-OurFacilities-01-BannerPrincipal.jpg');
+}
+.logistics{
+    background-image: url('./../../images/AMX_Web-3PLServices-01-BannerPrincipal.jpg');
 }

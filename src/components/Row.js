@@ -14,6 +14,12 @@ function Row( props ) {
         case "tb":
             padding = rowStyles.p0
             break
+        case "small":
+            padding = rowStyles.small
+            break
+        case "large":
+            padding = rowStyles.large
+            break
         default:
             padding = rowStyles.normal
             break

@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Column from '../components/Column'
@@ -16,7 +17,7 @@ function About() {
                 difference</h1>
             </MouseParallax>
             <section className="bg-red">
-                <Row>
+                <Row className="v-align">
                     <Column size={7}>
                         <h5>Our team is ready to respond on call, always there to take down any order no matter the size because we know that sometimes all it takes to keep growing is to sell another box - or pallet.</h5>
                     </Column>
@@ -30,10 +31,16 @@ function About() {
                 </Row>
             </section>
             <section>
-                <Row>
+                <Row padding="large" className="relative">
                     <Column size={9}>
                         <h2>We work with leadership, excellence and transparency</h2>
                     </Column>
+                    <div className="leadership-background">
+                        <StaticImage
+                            src="../images/AMX_Web-About-02-FondoGrafico.png"
+                            alt=""
+                        />
+                    </div>
                 </Row>
             </section>
             <section>
@@ -51,7 +58,7 @@ function About() {
                     <Column size={4}>
                         <h3>Experience and infrastructure</h3>
                         <p className="mt30">We have more than 20 years of experience distributing products from one of the largest plants in California and the only one of its kind certified by the USDA.</p>
-                        <button className="mt50">CHECK OUR FACILITIES</button>
+                        <Link to="/facilities" className="btn mt50">CHECK OUR FACILITIES</Link>
                     </Column>
                     <Column size={1}></Column>
                 </Row>
@@ -59,7 +66,7 @@ function About() {
                     <Column size={4}>
                         <h3>Wide availability</h3>
                         <p className="mt30">Thanks to our relationship with the largest food producers in the United States, we are able to secure and offer wide availability of high demand, premium and specialty products.</p>
-                        <button className="mt50">CHECK OUR FACILITIES</button>
+                        <Link to="/logistics" className="btn mt50">CHECK OUR PRODUCT LISTS</Link>
                     </Column>
                     <Column size={6} padding="0">
                         <StaticImage

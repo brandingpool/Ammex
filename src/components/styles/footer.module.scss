@@ -1,3 +1,11 @@
+.footer_links{
+    a{
+        margin: 0 10px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}
 .contactInfo{
     display: inline-block;
 }

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby";
 import MouseParallax from "../components/MouseParallax"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -21,7 +22,7 @@ const IndexPage = () => {
           <Card>
             <div className="title">
               <h3>Food<br/>Supply</h3>
-              <button>KNOW MORE</button>
+              <Link className="btn">KNOW MORE</Link>
             </div>
             <StaticImage
               src="../images/AMX_Web-Home-02-BoxImg-FoodSupply.jpg"
@@ -36,7 +37,7 @@ const IndexPage = () => {
           <Card>
             <div className="title">
               <h3>3PL<br/>Services</h3>
-              <button>KNOW MORE</button>
+              <Link to="/logistics" className="btn">KNOW MORE</Link>
             </div>
             <StaticImage
               src="../images/AMX_Web-Home-02-BoxImg-3PLService.jpg"
@@ -54,7 +55,7 @@ const IndexPage = () => {
             <h2>Let’s help you<br/>grow your business!</h2>
           </Column>
           <Column size={6} className="half text-center">
-            <button className="light">CONTACT US</button>
+            <Link to="/contact" className="btn light">CONTACT US</Link>
           </Column>
         </Row>
         <Row>

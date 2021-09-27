@@ -17,7 +17,7 @@ $sideGutters: 5%;
 $columnGutters: 30px;
 
 /* Font styling */
-h1, h2, h3, h6, .h7, .h7 li{
+h1, h2, h3, h6, .h7, .h7 li, a{
     font-family: 'Biryani Bold';
     margin: 0;
 }
@@ -25,17 +25,26 @@ h5{
     font-family: 'Biryani Semi';
     margin: 0;
 }
-body, button, ul, li, h4{
+body, button, ul, li, h4, input, textarea, select{
     font-family: 'Biryani';
     margin: 0;
 }
 
-body, button, input{
+body, button, input, textarea, select{
     font-size: 16px;
     line-height: 1.2em;
 }
 p{
     margin: 0;
+}
+a:not(.btn){
+    color: $Red;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    &:hover{
+        opacity: 0.5;
+        transition: 0.3s ease all;
+    }
 }
 h1{
     font-size: clamp(2.1875rem, 1.6667rem + 2.7778vw, 5rem);
@@ -58,6 +67,7 @@ h5{
 }
 h6{
     font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
+    line-height: 1.2em;
 }
 
 /* Colors */
@@ -72,11 +82,17 @@ section{
         color: white
     }
 }
+.black{
+    color: black;
+}
 
 
 /* Utilities */
 .text-center{
     text-align: center;
+}
+.flex{
+    display: flex;
 }
 .v-align{
     align-items: center;
@@ -84,49 +100,66 @@ section{
 .space-around{
     justify-content: space-around !important;
 }
+.space-between{
+    justify-content: space-between;
+}
 .cover-width{
     width: 100%;
     margin-bottom: -6px;
 }
 .relative{
     position: relative;
-    top: -240px;
+}
+.smooth-transition{
+    transition: 0.3s ease all;
 }
 
 /* Components */
-button{
+a.btn, button{
+    display: inline-block;
     background-color: $Red;
     color: white;
     border: 1px solid $Red;
-    padding: 5px 40px 0px;
+    padding: 10px 40px 4px;
+    text-decoration: none;
     transition: 0.3s ease all;
     &:hover{
         background-color: white;
         color: $Red;
         transition: 0.3s ease all;
     }
-}
-button.light{
-    background-color: white;
-    border-color: white;
-    color: $Red;
-    &:hover{
-        background-color: $Red;
+    &.light{
+        background-color: white;
+        border-color: white;
+        color: $Red;
+        &:hover{
+            background-color: $Red;
+            color: white;
+        }
+    }
+    &.blue{
+        background-color: #202945;
+        border-color: #202945;
         color: white;
     }
 }
-input{
+input, textarea, select{
     border: 1px solid $Red;
     padding: 10px;
+    color: $Red;
     &::placeholder{
         color: $Red;
     }
 }
+hr{
+    border-top: 1px solid $Red;
+    margin: 50px 0;
+}
 
 /* Grid */
-header{
+/*header{
     padding: 10px calc(#{$sideGutters} + #{$columnGutters});
-}
+}*/
 footer{
     h6, p, a{
         color: $Red;
@@ -136,9 +169,14 @@ footer{
 
 
 /* Spacing */
-.pt0{ padding-top: 0; }
+.pt0 { padding-top:    0; }
+.pt15{ padding-top: 15px; }
+.pt24{ padding-top: 24px; }
+.pt30{ padding-top: 30px; }
+.pt50{ padding-top: 50px; }
 
 .pb0{ padding-bottom: 0; }
+.pb30{ padding-bottom: 30px; }
 
 .p0{ padding: 0; }
 
@@ -157,4 +195,14 @@ img{ margin-bottom: -10px; }
 .custom-row-1{
     top: -240px;
     margin-bottom: -240px;
+}
+.leadership-background{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+}
+.map{
+    margin-top: -110px;
+    z-index: -1;
 }

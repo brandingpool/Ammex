@@ -1,5 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState, useEffect } from "react";
+import Column from "./Column";
+import Row from "./Row";
 import * as parallaxStyles from './styles/MouseParallax.module.scss'
 
 function MouseParallax (props){
@@ -51,15 +53,21 @@ function MouseParallax (props){
     else if( props.page === "services" ){
         background = parallaxStyles.services
     }
+    else if( props.page === "facilities"){
+        background = parallaxStyles.facilities
+    }
+    else if( props.page === "logistics"){
+        background = parallaxStyles.logistics
+    }
 
     return (
         <section className={ parallaxStyles.container + ' ' + background } style={ { backgroundPosition: mousePos } } onMouseMove={ parallax } role='banner'>
-            <div className="row">
+            <Row>
                 { graphic }
-                <div className="single">
+                <Column className="single">
                     { props.children }
-                </div>
-            </div>
+                </Column>
+            </Row>
         </section>
     )
     

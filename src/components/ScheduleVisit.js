@@ -1,5 +1,8 @@
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
+import Column from './Column';
+import Row from './Row';
 import * as styles from './styles/schedule.module.scss'
 
 function ScheduleVisit() {
@@ -18,21 +21,21 @@ function ScheduleVisit() {
     return (
         <>
         <section className={"bg-red " + styles.container}>
-            <div className="row">
-                <div className="half">
+            <Row>
+                <Column size={6}>
                     <h2>Let's meet and talk</h2>
                     <p>We work with an open-door policy to all our friends and clients.</p>
-                </div>
-                <div className="half">
+                </Column>
+                <Column size={6}>
                     <button className={ styles.circle } onClick={ popUp }>SCHEDULE<br/>A VISIT</button>
-                </div>
+                </Column>
                 <div className={ styles.dots }>
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-            </div>
+            </Row>
         </section>
         <section className={ styles.popUp + ' ' + togglePopUp }>
                 <div className={ styles.card }>
@@ -42,7 +45,7 @@ function ScheduleVisit() {
                             <line className={ styles.st0 } x1="0" y1="14.14" x2="14.14" y2="0"/>
                         </svg>
                     </button>
-                    <div className="row">
+                    <Row>
                         <div className="single">
                             <StaticImage
                                 src="../images/icon-ammex.png"
@@ -52,8 +55,8 @@ function ScheduleVisit() {
                             <h5>Please enter your contact info</h5>
                             <p>We will contact you as soon as possible to generate your appointment.</p>
                         </div>
-                    </div>
-                    <div className="row">
+                    </Row>
+                    <Row>
                         <form className={ styles.form }>
                             <input
                                 type="text"
@@ -79,7 +82,7 @@ function ScheduleVisit() {
                                 SEND
                             </button>
                         </form>
-                    </div>
+                    </Row>
                 </div>
         </section>
         </>

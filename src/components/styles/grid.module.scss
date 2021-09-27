@@ -5,6 +5,7 @@ $columnGutters: 30px;
 .column{
     box-sizing: border-box;
     padding: 0 $columnGutters;
+    width: 100%;
 }
 .col_1   {  width: 8.33%;  }
 .col_2   {  width: 16.66%; }
@@ -19,13 +20,34 @@ $columnGutters: 30px;
 .col_11  {  width: 91.63%; }
 
 .cp0{ padding: 0; }
+.cpl{ padding: 0 50px; }
 
 /* Row styles */
 .row{ 
     display: flex; 
     justify-content: space-between;
+    .row{
+        padding: 0;
+        margin-left: -$columnGutters;
+        margin-right: -$columnGutters;
+    }
 }
 .normal{ padding: 50px $sideGutters; }
+.small{ padding: 10px $sideGutters; }
+.large{ padding: 180px $sideGutters; }
 .pb0{ padding: 50px $sideGutters 0; }
 .pt0{ padding: 0 $sideGutters 50px; }
 .p0{ padding: 0 $sideGutters; }
+
+/* Image row */
+.image_row{
+    width: 100%;
+    overflow-x: hidden;
+    padding: 10px 0;
+}
+.image_row_inner{
+    width: 150%;
+    margin-left: -25%;
+    display: flex;
+    justify-content: center;
+}
