@@ -28,3 +28,30 @@
 .social{
     margin: 0 10px;
 }
+@media(max-width: 990px){
+    .footer_menu{
+        div{
+            width: 100%;
+        }
+        .footer_links{
+            display: flex;
+            flex-direction: column;
+            a{
+                margin: 10px 0;
+            }
+        }
+    }
+    .divider{
+        width: calc(100% - 50px);
+        margin-top: 0;
+    }
+    .legal{
+        padding: 15px 30px;
+        div{
+            display: flex;
+        }
+    }
+    .social{
+        margin: 0;
+    }
+}

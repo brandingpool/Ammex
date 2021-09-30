@@ -10,6 +10,7 @@ import ScheduleVisit from "../components/ScheduleVisit"
 
 import Column from "../components/Column"
 import Row from "../components/Row"
+import Check from "../components/Check";
 
 const IndexPage = () => {
   return (
@@ -51,18 +52,18 @@ const IndexPage = () => {
           </Card>
         </Row>
         <Row className="v-align">
-          <Column size={6}>
+          <Column size={6} mobile={3}>
             <h2>Let’s help you<br/>grow your business!</h2>
           </Column>
-          <Column size={6} className="half text-center">
+          <Column size={6} className="text-center">
             <Link to="/contact" className="btn light">CONTACT US</Link>
           </Column>
         </Row>
         <Row>
-          <Column size={6}>
+          <Column size={6} mobile={4}>
             <h5>We are the bridge that connects our clients with products of the the highest quality, small businesses with large producers, and our people with new opportunities. </h5>
           </Column>
-          <Column size={6} className="text-center">
+          <Column size={6} mobile={4} className="text-center">
             <StaticImage 
               src="../images/AMX_Web-Home-03-Img-Bridge.png"
               placeholder="blurred"
@@ -72,41 +73,41 @@ const IndexPage = () => {
           </Column>
         </Row>
         <Row>
-          <Column size={3}>
+          <Column size={3} mobile={4} padding="m0">
             <ul className="check h7">
-              <li>Fast friendly service</li>
-              <li>Inventory to guarantee supply</li>
-              <li>Same day delivery</li>
+              <Check>Fast friendly service</Check>
+              <Check>Inventory to guarantee supply</Check>
+              <Check>Same day delivery</Check>
             </ul>
           </Column>
-          <Column size={3}>
+          <Column size={3} mobile={4} padding="m0">
             <ul className="check h7">
-              <li>Quality guaranteed</li>
-              <li>Wide variety of products</li>
-              <li>Top brands</li>
+              <Check>Quality guaranteed</Check>
+              <Check>Wide variety of products</Check>
+              <Check>Top brands</Check>
             </ul>
           </Column>
-          <Column size={3}>
+          <Column size={3} mobile={4} padding="m0">
             <ul className="check h7">
-              <li>Usda facility</li>
-              <li>Strategic location</li>
-              <li>Customer service</li>
+              <Check>Usda facility</Check>
+              <Check>Strategic location</Check>
+              <Check>Customer service</Check>
             </ul>
           </Column>
-          <Column size={3}>
+          <Column size={3} mobile={4} padding="m0">
             <ul className="check h7">
-              <li>Technical support</li>
+              <Check>Technical support</Check>
             </ul>
           </Column>
         </Row>
       </section>
       <section>
         <Row className="v-align" padding="b">
-          <Column size={5}>
+          <Column size={5} mobile={3}>
             <h3>Breaking  supply chains to build supply communities</h3>
             <p>We want to be your ally, because we believe that when we support local restaurants and markets we also bring well-being to our community.</p>
           </Column>
-          <Column size={6} padding="0">
+          <Column size={6} mobile={4} padding="0">
             <StaticImage
               src="../images/AMX_Web-Home-04-Img.jpg"
               placeholder="blurred"
@@ -116,8 +117,8 @@ const IndexPage = () => {
             />
           </Column>
         </Row>
-        <Row className="v-align" padding="tb">
-          <Column size={6} padding="0">
+        <Row className="v-align reverse" padding="tb">
+          <Column size={6} mobile={4} padding="0">
             <StaticImage
               src="../images/AMX_Web-Home-05-Img.jpg"
               placeholder="blurred"
@@ -126,18 +127,18 @@ const IndexPage = () => {
               quality={ 100 }
             />
           </Column>
-          <Column size={5}>
+          <Column size={5} mobile={3}>
             <h3>Work together to grow together</h3>
             <p>At Ammex, we grow every time our clients reach their business goals as they keep trusting us to satisfy the needs of their companies. Which is why we are committed to be as reliable as a longtime friend.</p>
           </Column>
         </Row>
         <Row className="v-align" padding="t">
-          <Column size={5}>
+          <Column size={5} mobile={3}>
             <h4>+20 years</h4>
             <h3>A one of a kind family business</h3>
             <p>We have been working as a family to reach our goals for more than 20 years. Today, we work from one of the largest plants in California and the only one of its kind certified by the USDA.</p>
           </Column>
-          <Column size={6} padding="0">
+          <Column size={6} mobile={4} padding="0">
             <StaticImage
               src="../images/AMX_Web-Home-06-Img.jpg"
               placeholder="blurred"

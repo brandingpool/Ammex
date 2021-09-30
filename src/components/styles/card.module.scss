@@ -17,3 +17,15 @@
         margin: 0 0 -10px;
     }
 }
+
+@media(max-width: 990px){
+    .card{
+        width: 100%;
+        box-shadow: 0 0 38px -3px rgba(0,0,0,0.48);
+        -webkit-box-shadow: 0 0 38px -3px rgba(0,0,0,0.48);
+        -moz-box-shadow: 0 0 38px -3px rgba(0,0,0,0.48);
+        &:first-child{
+            margin-bottom: 50px;
+        }
+    }
+}

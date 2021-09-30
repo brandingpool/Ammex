@@ -29,3 +29,9 @@
 .logistics{
     background-image: url('./../../images/AMX_Web-3PLServices-01-BannerPrincipal.jpg');
 }
+
+@media(max-width: 990px){
+    .container{
+        background-size: 400%;
+    }
+}

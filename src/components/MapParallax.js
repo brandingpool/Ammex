@@ -5,22 +5,22 @@ import Row from './Row'
 
 function MapParallax() {
 
-    let windowWidth;
-    let windowHeight;
+    const [ windowWidth, setWindowWidth ] = useState(0)
+    const [ windowHeight, setWindowHeight ] = useState(0)
 
     const xAmount = 50
     const yAmount = 50
 
     useEffect(()=>{
-        windowWidth = window.innerWidth;
-        windowHeight = window.innerHeight;
+        setWindowWidth(window.innerWidth);
+        setWindowHeight(window.innerHeight);
 
         const onresize = () => {
-            windowWidth = window.innerWidth;
-            windowHeight = window.innerHeight;
+            setWindowWidth(window.innerWidth);
+            setWindowHeight(window.innerHeight);
         }
         window.addEventListener('onresize', onresize)
-    })
+    }, [])
     
     const [ mapPos, setMapPos ] = useState('0')
     const [ iconPos, setIconPos ] = useState('0')
@@ -31,8 +31,8 @@ function MapParallax() {
         let mapPosX = (((posX - 50) * xAmount) / 100) * -1
         let mapPosY = (((posY - 50) * yAmount) / 100) * -1
         setMapPos(mapPosY + 'px 0 0 ' + mapPosX + 'px')
-        let iconPosX = (((posX - 50) * (xAmount * 2)) / 100) * -1
-        let iconPosY = (((posY - 50) * (yAmount * 2)) / 100) * -1
+        let iconPosX = (((posX - 50) * (xAmount * 1.5)) / 100) * -1
+        let iconPosY = (((posY - 50) * (yAmount * 1.5)) / 100) * -1
         setIconPos(iconPosY + 'px 0 0 ' + iconPosX + 'px')
     }
     return (
@@ -47,13 +47,13 @@ function MapParallax() {
                                 quality={ 100 }
                             />
                         </div>
-                        <div style={ {width: '100%', boxSizing: 'border-box', position: 'absolute', top: 0, margin: iconPos } }>
+                        <div style={ {width: '90%', boxSizing: 'border-box', position: 'absolute', top: 0, margin: iconPos } }>
                          <StaticImage
                             src="../images/AMX_Web-OurFacilities-04-BannerLocation-Front-02.png"
                             alt="map"
                             placeholder="dominantColor"
                             quality={ 100 }
-                            style={ { width: "90%" } }
+                            /*style={ { width: "100%" } }*/
                         />
                         </div>
                     </Column>

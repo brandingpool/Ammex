@@ -5,19 +5,19 @@ import Row from "./Row";
 import * as parallaxStyles from './styles/MouseParallax.module.scss'
 
 function MouseParallax (props){
-    let windowWidth;
-    let windowHeight;
+    const [ windowWidth, setWindowWidth ] = useState(0)
+    const [ windowHeight, setWindowHeight ] = useState(0)
 
     useEffect(()=>{
-        windowWidth = window.innerWidth;
-        windowHeight = window.innerHeight;
+        setWindowWidth(window.innerWidth);
+        setWindowHeight(window.innerHeight);
 
         const onresize = () => {
-            windowWidth = window.innerWidth;
-            windowHeight = window.innerHeight;
+            setWindowWidth(window.innerWidth);
+            setWindowHeight(window.innerHeight);
         }
         window.addEventListener('onresize', onresize)
-    })
+    }, [])
 
     const [mousePos, setPosition] = useState('50% 50%');
     const [graphicTop, setTop] = useState('-5%')

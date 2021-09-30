@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import Column from './Column';
@@ -9,7 +8,15 @@ function ScheduleVisit() {
 
     const open = styles.opened;
     const [ togglePopUp, setpopUpToggle] = useState('');
+    const [ background, setBackground ] = useState('');
 
+    const white = () => {
+        const color = styles.white
+        setBackground(color)
+    }
+    const red = () => {
+        setBackground('')
+    }
     const popUp = ()=>{
         if(togglePopUp === ''){
             setpopUpToggle(open);
@@ -20,14 +27,17 @@ function ScheduleVisit() {
     }
     return (
         <>
-        <section className={"bg-red " + styles.container}>
-            <Row>
-                <Column size={6}>
+        <section className={"bg-red " + styles.container + ' ' + background}>
+            <Row padding="large">
+                <Column size={6} mobile={4} className={styles.text}>
                     <h2>Let's meet and talk</h2>
                     <p>We work with an open-door policy to all our friends and clients.</p>
                 </Column>
-                <Column size={6}>
-                    <button className={ styles.circle } onClick={ popUp }>SCHEDULE<br/>A VISIT</button>
+                <Column size={6} mobile={4}>
+                    <div className="relative">
+                        <button className={ styles.circle } onClick={ popUp } onMouseEnter={ white } onMouseLeave={ red }>SCHEDULE<br/>A VISIT</button>
+                        <div className={styles.background}></div>
+                    </div>
                 </Column>
                 <div className={ styles.dots }>
                     <div></div>
@@ -46,7 +56,7 @@ function ScheduleVisit() {
                         </svg>
                     </button>
                     <Row>
-                        <div className="single">
+                        <Column>
                             <StaticImage
                                 src="../images/icon-ammex.png"
                                 alt="Ammex icon"
@@ -54,7 +64,7 @@ function ScheduleVisit() {
                             />
                             <h5>Please enter your contact info</h5>
                             <p>We will contact you as soon as possible to generate your appointment.</p>
-                        </div>
+                        </Column>
                     </Row>
                     <Row>
                         <form className={ styles.form }>

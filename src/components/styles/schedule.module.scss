@@ -2,6 +2,12 @@
     padding: 100px 0;
     overflow: hidden;
     position: relative;
+    *{
+        transition: 1.5s ease all;
+    }
+}
+.text{
+    z-index: 1;
 }
 .circle{
     width: 120px;
@@ -13,16 +19,49 @@
     text-align: center;
     padding: 45px 0;
     position: relative;
+    background-color: transparent;
+    z-index: 1;
     /*&::before{
         content: '';
-        width: 10px;
-        height: 10px;
+        width: 0;
+        height: 0;
         border-radius: 100%;
         background-color: white;
         position: absolute;
         $middle: width / 2;
+        top: calc(50% - 5px);
         left: calc(50% - 5px);
+        transition: 1s ease all;
     }*/
+}
+.background{
+    background-color: white;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 0;
+    transition: 5s ease all;
+    animation-name: shrinkOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: 3s ease all;
+}
+.white{
+    *{
+        color: #FE3B1F !important;
+        transition: 2s ease all;
+    }
+    .circle{
+        border-color: #FE3B1F;
+    }
+    .background{
+        animation-name: growIn;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        transition: 3s ease all;
+    }
+    .dots div{
+        background-color: #FE3B1F;
+    }
 }
 .dots{
     position: absolute;
@@ -103,6 +142,20 @@
     animation-fill-mode: forwards;
     
 }
+@media(max-width: 990px){
+    .dots{ display: none; }
+    .popUp{
+        .form{
+            input{
+                width: calc(100% - 60px);
+                margin: 5px 30px;
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
+}
 
 @keyframes fadeIn {
     0%{
@@ -110,5 +163,35 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes growIn {
+    0%{
+        width: 0;
+        height: 0;
+        right: 50%;
+        top: 50%;
+    }
+    100%{
+        width: 200vw;
+        height: 200vw;
+        right: calc(50% - 100vw);
+        top: calc(50% - 100vw);
+    }
+}
+
+@keyframes shrinkOut {
+    0%{
+        width: 200vw;
+        height: 200vw;
+        right: calc(50% - 100vw);
+        top: calc(50% - 100vw);
+    }
+    100%{
+        width: 0;
+        height: 0;
+        right: 50%;
+        top: 50%;
     }
 }

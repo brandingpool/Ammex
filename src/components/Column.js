@@ -5,6 +5,9 @@ function Column( props ) {
 
     let size;
     switch(props.size){
+        case 0:
+            size = columnStyles.none
+            break
         case 1:
             size = columnStyles.col_1
             break
@@ -48,14 +51,37 @@ function Column( props ) {
         case "0":
             padding = columnStyles.cp0
             break
+        case "m0":
+            padding = columnStyles.mp0
+            break
         case "large":
             padding = columnStyles.cpl
             break
         default: 
             break
     }
+
+    let mobileSize;
+    switch(props.mobile){
+        case 1:
+            mobileSize = columnStyles.m_quarter
+            break
+        case 2:
+            mobileSize = columnStyles.m_half
+            break
+        case 3:
+            mobileSize = columnStyles.m_col_3
+            break
+        case 4:
+            mobileSize = columnStyles.m_full
+            break
+        default:
+            mobileSize = ''
+            break
+    }
+
     return (
-        <div className={ size + ' ' +columnStyles.column + ' ' + props.className + ' ' + padding }>
+        <div className={ size + ' ' + mobileSize + ' ' + columnStyles.column + ' ' + props.className + ' ' + padding }>
             { props.children }
         </div>
     )

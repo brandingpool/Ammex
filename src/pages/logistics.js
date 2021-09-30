@@ -15,7 +15,7 @@ function logistics() {
             </MouseParallax>
             <section>
                 <Row>
-                    <Column size={10}>
+                    <Column size={10} mobile={4}>
                         <StaticImage
                             src="../images/AMX_Web-3PLServices-02-Arrow.png"
                             alt="arrow"
@@ -27,6 +27,11 @@ function logistics() {
                 <Row>
                     <Column>
                         <h5>We are a one stop solution, leaders of a consolidated binational supply community with more than 30 years in this business and the bigger exporter in southern california as we export more than 100 loads a week.</h5>
+                    </Column>
+                </Row>
+                <Row>
+                    <Column>
+                        <hr/>
                     </Column>
                 </Row>
             </section>

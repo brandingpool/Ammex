@@ -310,7 +310,7 @@ function Services() {
     return (
         <section>
             <Row>
-                <Column size={3}>
+                <Column size={3} mobile={4}>
                     <ul className={ serviceStyle.button_list }>
                         <li>
                             <button 
@@ -366,7 +366,7 @@ function Services() {
                         </li>
                     </ul>
                 </Column>
-                <Column size={9}>
+                <Column size={9} mobile={4}>
                     <div className={ serviceStyle.title }>
                         { title }
                     </div>
@@ -375,7 +375,7 @@ function Services() {
                         <SideBar>
                             { sideBar }
                         </SideBar>
-                        <Column size={8}>
+                        <Column size={8} mobile={4}>
                             { image }
                         </Column>
                     </Row>
@@ -389,7 +389,7 @@ export default Services
 
 function SideBar( props ){
     return(
-        <Column size={4} className={ serviceStyle.sideBar }>
+        <Column size={4} mobile={4} className={ serviceStyle.sideBar }>
             { props.children }
         </Column>
     )

@@ -17,7 +17,7 @@ $sideGutters: 5%;
 $columnGutters: 30px;
 
 /* Font styling */
-h1, h2, h3, h6, .h7, .h7 li, a{
+h1, h2, h3, h6, .h6 li, .h7, .h7 li, a{
     font-family: 'Biryani Bold';
     margin: 0;
 }
@@ -65,7 +65,7 @@ h5{
     font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
     line-height: 1.2em;
 }
-h6{
+h6, .h6 li{
     font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
     line-height: 1.2em;
 }
@@ -91,8 +91,14 @@ section{
 .text-center{
     text-align: center;
 }
+.text-right{
+    text-align: right;
+}
 .flex{
     display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
 }
 .v-align{
     align-items: center;
@@ -112,6 +118,22 @@ section{
 }
 .smooth-transition{
     transition: 0.3s ease all;
+}
+.desktop-hide{
+    display: none !important;
+}
+
+@media(max-width: 990px){
+    .reverse{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .mobile-hide{
+        display: none !important;
+    }
+    .desktop-hide{
+        display: block !important;
+    }
 }
 
 /* Components */
@@ -155,6 +177,14 @@ hr{
     border-top: 1px solid $Red;
     margin: 50px 0;
 }
+.check{
+    list-style: none;
+    padding-left: 30px;
+    .checkMark{
+        margin-left: -30px;
+        margin-right: 10px;
+    }
+}
 
 /* Grid */
 /*header{
@@ -183,6 +213,8 @@ footer{
 .mt30{ margin-top: 30px; }
 .mt50{ margin-top: 50px; }
 
+.ml-20{ margin-left: -20%; }
+
 .mb30{ margin-bottom: 30px; }
 
 /* HTML defaults modifications */
@@ -205,4 +237,15 @@ img{ margin-bottom: -10px; }
 .map{
     margin-top: -110px;
     z-index: -1;
+}
+
+@media(max-width: 990px){
+    .custom-row-1{
+        box-sizing: border-box;
+        width: 100%;
+        flex-direction: column;
+        top: -200px;
+        margin-bottom: -200px;
+        padding: 50px 30px;
+    }
 }

@@ -5,8 +5,10 @@ import Layout from '../components/Layout'
 import MouseParallax from '../components/MouseParallax'
 import Row from '../components/Row'
 import ScheduleVisit from '../components/ScheduleVisit'
+import Check from '../components/Check'
 
-function services() {
+function Services() {
+
     return (
         <Layout>
             <MouseParallax page="services">
@@ -15,11 +17,11 @@ function services() {
             </MouseParallax>
             <section>
                 <Row className="v-align">
-                    <Column size={6}>
+                    <Column size={6} mobile={4}>
                         <h3>We supply well</h3>
                         <h5>We are proud of our work because everytime we supply markets and local restaurants with food, we also bring well- being to our community.</h5>
                     </Column>
-                    <Column size={6} className="text-center">
+                    <Column size={6} mobile={4} className="text-center">
                         <StaticImage
                             src="../images/AMX_Web-FoodSupply-02-Clip(Se-remplazara).jpg"
                             alt=""
@@ -38,7 +40,7 @@ function services() {
                     </Column>
                 </Row>
                 <Row>
-                    <Column size={6} padding="0">
+                    <Column size={6} mobile={4} padding="0">
                         <StaticImage
                             src="../images/AMX_Web-About-03-Img.jpg"
                             alt=""
@@ -47,28 +49,28 @@ function services() {
                             className="cover-width"
                         />
                     </Column>
-                    <Column size={6} padding="large" className="bg-red">
+                    <Column size={6} mobile={4} padding="large" className="bg-red">
                         <h3 className="pt50">Products</h3>
                         <h6>
-                            <ul>
-                                <li>Beef</li>
-                                <li>Poultry (Chicken / Turkey)</li>
-                                <li>Pork</li>
-                                <li>Lamb</li>
-                                <li>Offal</li>
-                                <li>Diary Products</li>
-                                <li>Dry goods</li>
+                            <ul className="check h6 pt24">
+                                <Check>Beef</Check>
+                                <Check>Poultry (Chicken / Turkey)</Check>
+                                <Check>Pork</Check>
+                                <Check>Lamb</Check>
+                                <Check>Offal</Check>
+                                <Check>Diary Products</Check>
+                                <Check>Dry goods</Check>
                             </ul>
                         </h6>
                     </Column>
                 </Row>
                 <Row>
-                    <Column size={6}>
+                    <Column size={6} mobile={4}>
                         <h2>We got your back no matter what</h2>
                     </Column>
                 </Row>
                 <Row padding="t">
-                    <Column size={7}>
+                    <Column size={7} mobile={4}>
                         <p>We know that sometimes the product you need is hard to handle or it is beyond your reach. Wich is why we work with more than 120 international brands across...</p>
                         <h1 className="mt50">USA</h1>
                         <h1>Mexico</h1>
@@ -82,12 +84,19 @@ function services() {
                             className='map'
                         />
                     </Column>
-                    <Column size={5}>
+                    <Column size={5} mobile={4}>
                         <p>Our partnerships includes:</p>
-                        <StaticImage
-                            src='../images/AMX_Web-FoodSupply-05-Logos.png'
-                            alt="Daily's, Carolina turkey, Carnencanto, Cargill, Bars S, Darigold, Olymel, McCain, SeaBord foods, Yosemite foods, Banquet, Swift, Qualimentos, Pilgrim's, Sanderson Farms, Longmont, Smithfield, Farmer John, OkFoods, Viva, Tyson, Joseph Gallo Farms, Ibp, Harris ranch, Farmland, Hormel foods, Buterball, Ventura foods, Table maid, Sioux preme, Peco, One world, maple leaf"
+                        <StaticImage 
+                            src='../images/AMX_Web-FoodSupply-05-Logos.png' 
+                            alt="Daily's, Carolina turkey, Carnencanto, Cargill, Bars S, Darigold, Olymel, McCain, SeaBord foods, Yosemite foods, Banquet, Swift, Qualimentos, Pilgrim's, Sanderson Farms, Longmont, Smithfield, Farmer John, OkFoods, Viva, Tyson, Joseph Gallo Farms, Ibp, Harris ranch, Farmland, Hormel foods, Buterball, Ventura foods, Table maid, Sioux preme, Peco, One world, maple leaf" 
                             placeholder="tracedSVG"
+                            className="mobile-hide"
+                        />
+                        <StaticImage 
+                            src='../images/AMX_Web-FoodSupply-05-Logos-VersionMobile.jpg' 
+                            alt="Daily's, Carolina turkey, Carnencanto, Cargill, Bars S, Darigold, Olymel, McCain, SeaBord foods, Yosemite foods, Banquet, Swift, Qualimentos, Pilgrim's, Sanderson Farms, Longmont, Smithfield, Farmer John, OkFoods, Viva, Tyson, Joseph Gallo Farms, Ibp, Harris ranch, Farmland, Hormel foods, Buterball, Ventura foods, Table maid, Sioux preme, Peco, One world, maple leaf" 
+                            placeholder="tracedSVG"
+                            className="desktop-hide"
                         />
                     </Column>
                 </Row>
@@ -97,4 +106,4 @@ function services() {
     )
 }
 
-export default services
+export default Services

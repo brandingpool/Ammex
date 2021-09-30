@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import Column from './Column'
 import Row from './Row'
 
+import * as facilityStyles from './styles/facilities.module.scss'
+
 function Facilities() {
     
     const [ image, setImage ] = useState(<StaticImage
@@ -86,67 +88,68 @@ function Facilities() {
         }
     }
     return (
-        <Row>
-            <Column size={3}>
-                <ol className="h7">
-                    <li 
-                    onMouseOver={ ()=>{ area(0) } }
-                    onFocus={ () => { area(0) } }>
-                        Dry area storage
+        <Row padding="t">
+            <Column size={3} mobile={4}>
+                <ol className={"h7 " + facilityStyles.list }>
+                    <li>
+                        <a onMouseOver={ ()=>{ area(0) } } onFocus={ () => { area(0) } } href="###">
+                            Dry area storage
+                        </a>
                     </li>
-                    <li
-                    onMouseOver={ ()=>{ area(1) } }
-                    onFocus={ () => { area(0) } }>
-                        Fully racked sections
+                    <li>
+                        <a onMouseOver={ ()=>{ area(1) } } onFocus={ () => { area(1) } } href="###">
+                            Fully racked sections
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(2) } }
-                    onFocus={ () => { area(0) } }>
-                        Refrigerated cold storage
+                    <li>
+                        <a onMouseOver={ ()=>{ area(2) } } onFocus={ () => { area(2) } } href="###">
+                            Refrigerated cold storage
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(3) } }
-                    onFocus={ () => { area(0) } }>
-                        Freezer cold storage
+                    <li>
+                        <a onMouseOver={ ()=>{ area(3) } } onFocus={ () => { area(3) } } href="###">
+                            Freezer cold storage
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(4) } }
-                    onFocus={ () => { area(0) } }>
-                        Full staging area
+                    <li>
+                        <a onMouseOver={ ()=>{ area(4) } } onFocus={ () => { area(4) } } href="###">
+                            Full staging area
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(5) } }
-                    onFocus={ () => { area(0) } }>
-                        Electric equipment
+                    <li>
+                        <a onMouseOver={ ()=>{ area(5) } } onFocus={ () => { area(5) } } href="###">
+                            Electric equipment
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(6) } }
-                    onFocus={ () => { area(0) } }>
-                        17 docks
+
+                    <li>
+                        <a onMouseOver={ ()=>{ area(6) } } onFocus={ () => { area(6) } } href="###">
+                            17 docks
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(7) } }
-                    onFocus={ () => { area(0) } }>
-                        Truck packing
+                    <li>
+                        <a onMouseOver={ ()=>{ area(7) } } onFocus={ () => { area(7) } } href="###">
+                            Truck packing
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(8) } }
-                    onFocus={ () => { area(0) } }>
-                        Refrigerated transportation
+                    <li>
+                        <a onMouseOver={ ()=>{ area(8) } } onFocus={ () => { area(8) } } href="###">
+                            Refrigerated transportation
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(9) } }
-                    onFocus={ () => { area(0) } }>
-                        USDA exporting plant
+                    <li>
+                        <a onMouseOver={ ()=>{ area(9) } } onFocus={ () => { area(9) } } href="###">
+                            USDA exporting plant
+                        </a>
                     </li>
-                    <li 
-                    onMouseOver={ ()=>{ area(10) } }
-                    onFocus={ () => { area(0) } }>
-                        In - House custom agency
+                    <li>
+                        <a onMouseOver={ ()=>{ area(10) } } onFocus={ () => { area(10) } } href="###">
+                            In - House custom agency
+                        </a>
                     </li>
                 </ol>
             </Column>
-            <Column size={9}>
+            <Column size={9} mobile={4}>
                 { image }
             </Column>
         </Row>
