@@ -8,6 +8,9 @@ function MouseParallax (props){
     const [ windowWidth, setWindowWidth ] = useState(0)
     const [ windowHeight, setWindowHeight ] = useState(0)
 
+    const xAmount = 10
+    const yAmount = 10
+
     useEffect(()=>{
         setWindowWidth(window.innerWidth);
         setWindowHeight(window.innerHeight);
@@ -22,14 +25,20 @@ function MouseParallax (props){
     const [mousePos, setPosition] = useState('50% 50%');
     const [graphicTop, setTop] = useState('-5%')
     const [graphicRight, setRight] = useState('-5%')
+    
     const parallax = (e) => {
-        let posX = Math.floor((e.clientX * 100) / windowWidth)
-        let posY = Math.floor((e.clientY * 100) / windowHeight)
+        let posX = (e.clientX * 100) / windowWidth
+        let posY = (e.clientY * 100) / windowHeight
         
-        setPosition( posX + '% ' + posY + '%')
+        let mousePosX = 50 + (((posX - 50) * xAmount) / 100)
+        let mousePosY = 50 + (((posY - 50) * yAmount) / 100)
 
-        let graphicX = ((posX / 100) * 5 ) - 5
-        let graphicY = (posY / 100) * - 5
+        console.log(mousePosX)
+        
+        setPosition( mousePosX + '% ' + mousePosY + '%')
+
+        let graphicX = ((posX / 100) * 10 ) - 10
+        let graphicY = (posY / 100) * - 10
         setRight(graphicX + '%')
         setTop(graphicY + '%')
         //console.log(graphicX)
@@ -44,6 +53,7 @@ function MouseParallax (props){
                     placeholder="none"
                     className={ parallaxStyles.graphic }
                     style={ { top: graphicTop, right: graphicRight } }
+                    width={ 900 }
                   />
         background = parallaxStyles.home
     }

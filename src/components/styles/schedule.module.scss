@@ -10,17 +10,22 @@
     z-index: 1;
 }
 .circle{
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     display: block;
     margin: 0 auto;
     border: 2px solid white;
     border-radius: 100%;
     text-align: center;
-    padding: 45px 0;
+    padding: 49px 0;
     position: relative;
-    background-color: transparent;
+    background-color: #FE3B1F;
     z-index: 1;
+    &:hover{
+        background-color: #FE3B1F;
+        color: white !important;
+        border-color: white;
+    }
     /*&::before{
         content: '';
         width: 0;
@@ -118,7 +123,13 @@
             stroke-miterlimit:10;
         }
     }
+    
     .form{
+        .alert{
+            border: 1px solid #FE3B1F;
+            padding: 15px 10px 10px;
+            margin: -50px 30px 10px;
+        }
         /*padding: 0 30px;*/
         input{
             box-sizing: border-box;

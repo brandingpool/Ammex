@@ -25,6 +25,14 @@ function ScheduleVisit() {
             setpopUpToggle('');
         }
     }
+
+    /*const hangleChange = e => {
+        const key = e.target.name
+        const val = e.target.value
+        console.log(e.target.value)
+        setFormValue({ key: val })
+    }*/
+
     return (
         <>
         <section className={"bg-red " + styles.container + ' ' + background}>
@@ -67,31 +75,7 @@ function ScheduleVisit() {
                         </Column>
                     </Row>
                     <Row>
-                        <form className={ styles.form }>
-                            <input
-                                type="text"
-                                placeholder="First Name"
-                                name="firstName"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Last Name"
-                                name="lastName"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                name="email"
-                            />
-                            <input
-                                type="tel"
-                                placeholder="Phone Number"
-                                name="firstName"
-                            />
-                            <button>
-                                SEND
-                            </button>
-                        </form>
+                        <ScheduleForm />
                     </Row>
                 </div>
         </section>
@@ -100,3 +84,77 @@ function ScheduleVisit() {
 }
 
 export default ScheduleVisit
+
+class ScheduleForm extends React.Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            alert: ''
+        }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+
+    }
+
+    handleChange(e){
+        const key = e.target.name
+        const val = e.target.value
+
+        this.setState({
+            [key]: val
+        })
+    }
+    handleSubmit(e){
+        e.preventDefault()
+        if(this.state.firstName === '' || this.state.lastName === '' || this.state.email === '' || this.state.phone === ''){
+            this.setState({ alert: (<div className={styles.alert}>
+                <p>Please, fill out all the fields</p>
+            </div>)})
+        }
+        else{
+            this.setState({alert: ''})
+        }
+    }
+    render(){
+        return(
+            <form className={ styles.form } onSubmit={ this.handleSubmit }>
+                { this.state.alert }
+                <input
+                    type="text"
+                    placeholder="First Name"
+                    name="firstName"
+                    value={ this.state.firstName }
+                    onChange={ this.handleChange }
+                />
+                <input
+                    type="text"
+                    placeholder="Last Name"
+                    name="lastName"
+                    value={ this.state.lastName }
+                    onChange={ this.handleChange }
+                />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    value={ this.state.email }
+                    onChange={ this.handleChange }
+                />
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    name="phone"
+                    value={ this.state.phone }
+                    onChange={ this.handleChange }
+                />
+                <button>
+                    SEND
+                </button>
+            </form>
+        )
+    }
+}

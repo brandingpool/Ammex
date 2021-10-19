@@ -1,12 +1,13 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import Column from "./Column";
 import Row from "./Row";
 
 import * as headerStyles from './styles/header.module.scss'
 
-function Header(){
+function Header(props){
 
     const [ menu, setMenu ] = useState(<DesktopMenu/>)
     useEffect(() => {
@@ -31,9 +32,14 @@ function Header(){
     }, [])
     
     return(
-        <header>
-            { menu }
-        </header>
+        <>
+            <Helmet>
+                <title>{ props.title + ' | We care, we deliver, we supply well' }</title>
+            </Helmet>
+            <header>
+                { menu }
+            </header>
+        </>
     )
 }
 export default Header;
@@ -51,7 +57,11 @@ function DesktopMenu(){
             </Column>
             <Column size={4} className="flex space-between">
                 <Link to='/about' className="h7">About Us</Link>
-                <Link to='/services' className="h7">Services</Link>
+                <div className={ headerStyles.services }>
+                    <span className="h7 a">Services</span>
+                    <Link to="/foodSupply">Food Supply</Link>
+                    <Link to="/logistics">3PL Services</Link>
+                </div>
                 <Link to='/facilities' className="h7">Facilities</Link>
                 <Link to='/contact' className="h7">Contact</Link>
             </Column>
@@ -62,7 +72,6 @@ function MobileMenu(){
     const closed = headerStyles.closed
     const opened = headerStyles.opened
     const [ toggle, setToggle ] = useState(closed)
-
     const toggleTrigger = () => {
         if(toggle === closed){
             setToggle(opened)
@@ -93,9 +102,13 @@ function MobileMenu(){
             </Column>
         </Row>
         <Row className={ headerStyles.mobile_menu + ' ' + toggle}>
-            <Column className="flex space-between">
+            <Column className={"flex space-between " + headerStyles.mobile_menu_items }>
                 <Link to='/about' className="h7">About Us</Link>
-                <Link to='/services' className="h7">Services</Link>
+                <div className={ headerStyles.services }>
+                    <span className="h7 a">Services</span>
+                    <Link to="/foodSupply">Food Supply</Link>
+                    <Link to="/logistics">3PL Services</Link>
+                </div>
                 <Link to='/facilities' className="h7">Facilities</Link>
                 <Link to='/contact' className="h7">Contact</Link>
             </Column>

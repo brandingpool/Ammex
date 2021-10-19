@@ -1,8 +1,10 @@
 .container{
+    box-sizing: border-box;
     position: relative;
-    padding: 180px 0;
-    min-height: 50vh;
-    background-size: 120%;
+    padding: 250px 0;
+    min-height: calc(100vh - 70px);
+    background-size: 150%;
+    background-repeat: no-repeat;
     transition: 0.3s ease-out all;
     overflow: hidden;
     *{
@@ -14,7 +16,7 @@
     }
 }
 .home{
-    background-size: 110%;
+    background-size: 150%;
     background-image: url('./../../images/AMX_Web-Home-01-BannerPrincipal.jpg');
 }
 .about{

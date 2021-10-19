@@ -11,10 +11,10 @@ import ScheduleVisit from '../components/ScheduleVisit'
 
 function facilities() {
     return (
-        <Layout>
+        <Layout title="Facilities">
             <MouseParallax page="facilities">
                 <h4>Our facilities</h4>
-                 <h1>The greatest warehouse<br/>of its kind in California</h1>
+                 <h1 className="mt30">The greatest warehouse<br/>of its kind in California</h1>
             </MouseParallax>
             <section className="bg-red">
                 <Row padding="large">

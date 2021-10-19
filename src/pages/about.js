@@ -9,7 +9,7 @@ import ScheduleVisit from '../components/ScheduleVisit'
 
 function About() {
     return (
-        <Layout>
+        <Layout title="About us">
             <MouseParallax page="about">
                 <h4>+20 years</h4>
                 <h1 className="mt30">Teamwork<br/>

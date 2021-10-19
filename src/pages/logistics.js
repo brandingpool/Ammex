@@ -5,17 +5,18 @@ import Layout from '../components/Layout'
 import MouseParallax from '../components/MouseParallax'
 import Services from '../components/Services'
 import Row from '../components/Row'
+import ScheduleVisit from '../components/ScheduleVisit'
 
 function logistics() {
     return (
-        <Layout>
+        <Layout title="3PL Logistics">
             <MouseParallax page="logistics">
                 <h4>3PL Logistics</h4>
-                <h1>Teamwork<br/>and Logistics</h1>
+                <h1 className="mt30">Teamwork<br/>and Logistics</h1>
             </MouseParallax>
             <section>
                 <Row>
-                    <Column size={10} mobile={4}>
+                    <Column size={10} mobile={4} className="pt50">
                         <StaticImage
                             src="../images/AMX_Web-3PLServices-02-Arrow.png"
                             alt="arrow"
@@ -36,6 +37,7 @@ function logistics() {
                 </Row>
             </section>
             <Services/>
+            <ScheduleVisit />
         </Layout>
     )
 }

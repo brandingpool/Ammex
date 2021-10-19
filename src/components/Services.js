@@ -375,7 +375,7 @@ function Services() {
                         <SideBar>
                             { sideBar }
                         </SideBar>
-                        <Column size={8} mobile={4}>
+                        <Column size={8} mobile={4} className="text-right">
                             { image }
                         </Column>
                     </Row>

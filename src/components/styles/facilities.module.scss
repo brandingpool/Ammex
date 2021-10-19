@@ -5,6 +5,9 @@
     li{
         counter-increment: item;
         margin-bottom: 25px !important;
+        .active{
+            color: #202945;
+        }
     }
     li:before{
         content: counter(item);

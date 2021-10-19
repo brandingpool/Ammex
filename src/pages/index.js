@@ -14,16 +14,16 @@ import Check from "../components/Check";
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout title="Ammex">
       <MouseParallax page="home" graphic="AMX_Web-Home-01-BannerPrincipal-Grafico.png">
-        <h1>We care, we deliver,<br/>we supply well.</h1>
+        <h1>We care,<br/>we deliver,<br/>we supply well.</h1>
       </MouseParallax>
       <section className="bg-red">
         <Row className="space-around relative custom-row-1">
           <Card>
             <div className="title">
               <h3>Food<br/>Supply</h3>
-              <Link className="btn">KNOW MORE</Link>
+              <Link to='/foodSupply' className="btn">KNOW MORE</Link>
             </div>
             <StaticImage
               src="../images/AMX_Web-Home-02-BoxImg-FoodSupply.jpg"
@@ -31,8 +31,10 @@ const IndexPage = () => {
               alt=""
               quality={ 100 }
               width={ 593 }
-              aspectRatio={ 16/5 }
-              objectPosition="center"
+              height={ 250 }
+              /*aspectRatio={ 2/1 }*/
+              /*objectPosition="center"*/
+              imgStyle={{ objectFit: 'cover' }}
             />
           </Card>
           <Card>
@@ -45,9 +47,9 @@ const IndexPage = () => {
               alt=""
               as="figure"
               quality={ 100 }
-              width={ 593 }
-              aspectRatio={ 16/5 }
-              objectPosition="center"
+              height={ 250 }
+              /*aspectRatio={ 16/5 }
+              objectPosition="center"*/
             />
           </Card>
         </Row>
@@ -55,7 +57,7 @@ const IndexPage = () => {
           <Column size={6} mobile={3}>
             <h2>Let’s help you<br/>grow your business!</h2>
           </Column>
-          <Column size={6} className="text-center">
+          <Column size={6} mobile={3} className="text-center">
             <Link to="/contact" className="btn light">CONTACT US</Link>
           </Column>
         </Row>

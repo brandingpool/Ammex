@@ -8,7 +8,7 @@ function Check(props) {
                 src="../images/check-ammex.png"
                 alt="check"
                 placeholder="tracedSVG"
-                width={ 20 }
+                width={ 25 }
                 className="checkMark"
             />
             { props.children }

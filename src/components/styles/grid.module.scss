@@ -47,6 +47,8 @@ $columnGutters: 30px;
     display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 1480px;
+    margin: auto;
     .row{
         padding: 0;
         margin-left: -$columnGutters;

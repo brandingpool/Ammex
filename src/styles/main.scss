@@ -31,15 +31,18 @@ body, button, ul, li, h4, input, textarea, select{
 }
 
 body, button, input, textarea, select{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.2em;
 }
 p{
+    color: #202945;
     margin: 0;
+    line-height: 1.5em;
 }
-a:not(.btn){
+a:not(.btn), .a{
     color: $Red;
     text-decoration: none;
+    cursor: pointer;
     transition: 0.3s ease all;
     &:hover{
         opacity: 0.5;
@@ -63,11 +66,17 @@ h4{
 }
 h5{
     font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
-    line-height: 1.2em;
+    line-height: 1.5em;
 }
 h6, .h6 li{
     font-size: clamp(1.0625rem, 0.912rem + 0.8025vw, 1.875rem);
     line-height: 1.2em;
+}
+@media(max-width: 768px){
+    body, button, input, textarea, select{
+        font-size: 16px;
+        line-height: 1.2em;
+    }
 }
 
 /* Colors */
@@ -83,7 +92,7 @@ section{
     }
 }
 .black{
-    color: black;
+    color: #202945;
 }
 
 
@@ -108,6 +117,9 @@ section{
 }
 .space-between{
     justify-content: space-between;
+}
+.flex-column{
+    flex-direction: column;
 }
 .cover-width{
     width: 100%;
@@ -165,6 +177,11 @@ a.btn, button{
         color: white;
     }
 }
+@media(max-width: 990px){
+    a.btn, button{
+        padding: 10px 20px 4px;
+    }
+}
 input, textarea, select{
     border: 1px solid $Red;
     padding: 10px;
@@ -180,6 +197,9 @@ hr{
 .check{
     list-style: none;
     padding-left: 30px;
+    li{
+        margin-bottom: 30px;
+    }
     .checkMark{
         margin-left: -30px;
         margin-right: 10px;
@@ -227,6 +247,15 @@ img{ margin-bottom: -10px; }
 .custom-row-1{
     top: -240px;
     margin-bottom: -240px;
+    .title{
+        display: flex; 
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 80px 50px;
+        h3{
+            color: #FE3B1F;
+        }
+    }
 }
 .leadership-background{
     position: absolute;
@@ -247,5 +276,8 @@ img{ margin-bottom: -10px; }
         top: -200px;
         margin-bottom: -200px;
         padding: 50px 30px;
+        .title{
+            padding: 30px 20px;
+        }
     }
 }

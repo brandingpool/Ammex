@@ -37,14 +37,23 @@ function Footer(props){
                 </Column>
                 <Column size={6} className={ footerStyles.footer_links }>
                     <Link to='/about' className="h7">About Us</Link>
-                    <Link to='/services' className="h7">Services</Link>
+                    <div className={ footerStyles.services }>
+                        <span className="h7 a">Services</span>
+                        <Link to="/foodSupply">Food Supply</Link>
+                        <Link to="/logistics">3PL Services</Link>
+                    </div>
                     <Link to='/facilities' className="h7">Facilities</Link>
                     <Link to='/contact' className="h7">Contact</Link>
                 </Column>
             </Row>
             { contact }
-            <div className={ footerStyles.divider }></div>
-            <div className={ footerStyles.legal }>
+            <Row padding="tb">
+                <Column>
+                    <div className={ footerStyles.divider }></div>
+                </Column>
+            </Row>
+            <Row padding="small">
+                <Column className={ footerStyles.legal }>
                 <p>&#169; 2021 Ammex. All Rights Reserved.</p>
                 <div>
                     <a href="###" className={ footerStyles.social }>
@@ -60,7 +69,8 @@ function Footer(props){
                         />
                     </a>
                 </div>
-            </div>
+                </Column>
+            </Row>
         </footer>
     )
 }

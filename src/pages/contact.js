@@ -7,7 +7,7 @@ import Row from '../components/Row'
 
 function contact() {
     return (
-        <Layout>
+        <Layout title="Contact">
             <section>
                 <Row padding="large" className="pb30">
                     <Column size={7} mobile={4}>

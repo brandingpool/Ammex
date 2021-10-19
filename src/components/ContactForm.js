@@ -24,7 +24,7 @@ function ContactForm() {
             <select>
                 <option>Select</option>
             </select>
-            <textarea placeholder="Message"></textarea>
+            <textarea placeholder="Message" rows="5"></textarea>
             <button>SEND</button>
         </form>
     )
